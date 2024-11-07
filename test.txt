@@ -3,3 +3,7 @@ welcome to test series
 
 Test case: login interface
 Test case: registation interface
+Test case: login action
+Test case: register action
+Test case: bot interactive mode
+Test case: language inteactive mode(english)   ## new languages can be added or not
