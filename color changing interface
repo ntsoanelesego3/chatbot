@@ -1,0 +1,74 @@
+ <div class="nav-item">
+        <button type="button" class="btn btn-light-blue my-3" id="logout-btn">Logout</button>
+        <style>
+            .btn-light-blue {
+                background-color: #6e858d;
+                border-color: #849b9b;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: #192229;
+            }
+            
+            .btn-light-blue:hover {
+                background-color: #2550db;
+                border-color: #1b38db;
+            }
+            
+            .btn-light-blue:active {
+                background-color: #4682B4;
+                border-color: #4682B4;
+            }
+        </style>
+    </div>
+    <script>
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            location.href = '/user_login';
+        });
+    </script>
+    </script>
+    <!-- endhere -->
+    <!--start-->
+    <!-- Add a select element with color options -->
+    <select id="color-select" class="form-select" style="position: relative; top: -50px;">
+    <option value="bg-light">Light</option>
+    <option value="bg-red">Red</option>
+    <option value="bg-green">Green</option>
+    <option value="bg-blue">Blue</option>
+    <option value="bg-violet">Violet</option>
+  </select>
+
+    <!-- Add CSS styles for the color classes -->
+    <style>
+        .bg-light {
+            background-color: #f0f0f0!important;
+        }
+        
+        .bg-red {
+            background-color: #dc3545!important;
+        }
+        
+        .bg-green {
+            background-color: #28a745!important;
+        }
+        
+        .bg-blue {
+            background-color: #007bff!important;
+        }
+        
+        .bg-violet {
+            background-color: #6c5ce7!important;
+        }
+    </style>
+
+    <!-- Update JavaScript code to handle color change -->
+    <script>
+        const colorSelect = document.getElementById('color-select');
+
+        colorSelect.addEventListener('change', () => {
+            const selectedColor = colorSelect.value;
+            document.body.classList.remove('bg-light', 'bg-red', 'bg-green', 'bg-blue', 'bg-violet');
+            document.body.classList.add(selectedColor);
+        });
+    </script>
+    <!--end-->
