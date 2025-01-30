@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static '#' %}">
+</head>
+<body id="mybody">
+    <a href="{% url 'login' %}">Login</a>
+{% csrf_token %}
+<class Methods=="POST">
+    <section class="intro">
+
+        <div class="mask d-flex align-items-center h-100">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-10">
+                <div class="card" style="border-radius: 1rem;">
+                  <div class="card-body p-5">
+    
+                    <h1 class="mb-5 text-center">Registation</h1>
+    
+                    <form>
+                      <!-- 2 column grid layout with text inputs for the first and last names -->
+                      <div class="row">
+                        <div class="col-12 col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="fname" placeholder="First name" class="form-control" />
+                            <label class="form-label" for="fname">First name</label>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="lname" placeholder="Last name" class="form-control" />
+                            <label class="form-label" for="lname">Last name</label>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Email input -->
+                      <div class="form-outline mb-4">
+                        <input type="email" id="email" placeholder="Email" class="form-control" />
+                        <label class="form-label" for="email">Email</label>
+                      </div>
+                      <!--password-->
+                      {% if error_message %}
+                      <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+                      {% endif %}
+
+
+                      <div class="form-outline">
+                        <input type="password" id="passwd" placeholder="Password" class="form-control" />
+                        <label class="form-label" for="passwd">Password</label>
+                      </div>
+                      <div class="form-outline">
+                        <input type="password" id="passwd2" placeholder="Password2" class="form-control" />
+                        <label class="form-label" for="passwd2">comfirm Password</label>
+                      </div>
+
+
+                      <!-- Submit button -->
+                      <button id="register" type="submit" class="btn btn-secondary btn-rounded btn-block">Register</button>
+                    </form>
+    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    
+</body>
+</html>
